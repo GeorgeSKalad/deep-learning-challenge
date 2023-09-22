@@ -1,0 +1,81 @@
+
+# Report on the Performance of Deep Learning Models for Alphabet Soup
+
+## Overview of the Analysis
+
+The purpose of this analysis is to develop deep learning models using TensorFlow and 
+Keras to predict the success of charitable organizations based on various input features. The dataset used in this analysis includes 
+information about these charitable organizations, such as application type, classification, and other attributes.
+
+## Results
+
+### Data Preprocessing
+
+**Target Variable(s):**
+- The target variable for all models is "IS_SUCCESSFUL," which indicates whether a charitable organization's 
+funding application was successful or not.
+
+**Feature Variable(s):**
+- The feature variables include all the remaining columns in the dataset after dropping "EIN" and "NAME."
+
+**Variables Removed:**
+- The "EIN" (Employer Identification Number) and "NAME" columns were removed from the input data because they do not provide 
+meaningful information for predicting the success of charitable organizations.
+
+### Model 1: nn (Initial Model)
+
+#### Architecture
+- Input layer with the number of neurons equal to the number of input features.
+- Two hidden layers with 8 and 16 neurons, respectively, using ReLU activation functions.
+- An output layer with a single neuron using a sigmoid activation function.
+
+#### Model Performance
+- Trained for 100 epochs.
+- Evaluation on the test data:
+  - Loss: 0.5558
+  - Accuracy: 0.7228
+
+**Achievement of Target Model Performance:**
+- The initial model (nn) achieved a reasonable accuracy of approximately 72.28%.
+
+### Model 2: nn_model2
+
+#### Architecture
+- Input layer with the number of neurons equal to the number of input features.
+- Three hidden layers with 7, 14, and 21 neurons, respectively, using a combination of ReLU and sigmoid activation functions.
+- An output layer with a single neuron using a sigmoid activation function.
+
+#### Model Performance
+- Evaluation on the test data:
+  - Loss: 0.5539
+  - Accuracy: 0.7268
+
+**Achievement of Target Model Performance:**
+- Model 2 (nn_model2) also performed well, achieving an accuracy of approximately 72.68%.
+
+### Model 3: nn_model3
+
+#### Architecture
+- Input layer with the number of neurons equal to the number of input features.
+- Four hidden layers with 15, 10, 8, and 6 neurons, respectively, using a combination of ReLU and sigmoid activation functions.
+- An output layer with a single neuron using a sigmoid activation function.
+
+#### Model Performance
+- Evaluation on the test data:
+  - Loss: 0.5563
+  - Accuracy: 0.7245
+
+**Achievement of Target Model Performance:**
+- Model 3 (nn_model3) achieved a similar accuracy of approximately 72.45 % to Model 2, indicating consistent performance.
+
+### Summary 
+
+In summary, all three deep learning models exhibited good performance in predicting the success of charitable organizations. 
+The initial model (nn) achieved a reasonable accuracy of approximately 72.28%, 
+and both alternative models (nn_model2 and nn_model3) demonstrated similar accuracy levels,
+ with nn_model3 achieving an accuracy of approximately 72.55%.(Average)
+
+Recommendations for Further Analysis:
+- While the current models have achieved satisfactory accuracy, further hyperparameter tuning, feature engineering, or ensemble methods 
+could potentially enhance predictive performance.
+
